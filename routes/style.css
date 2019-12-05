@@ -1,0 +1,97 @@
+* {box-sizing: border-box}
+
+.container{
+	padding: 16px;
+}
+
+input[type=text],input[type=password],input[type=number],input[type=email]{
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+body {background-color: lightblue;}
+h1 {color: blue;}
+p {color: red;}
+.btn {
+	border: none;
+	background-color: inherit;
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	display: inline-block;
+}
+.success {
+	color:  green;
+}
+.success:hover{
+	background-color: #4CAF50;
+	color: white;
+}
+
+#parentalB {
+	padding: 10px;
+	color: white;
+	background-color: #009578;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;;
+}
+
+#parentalB:hover {
+	background-color: #00b28f;
+}
+
+#parentalS {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaa;
+}
+
+#schoolBtn {
+	padding: 10px;
+	color: white;
+	background-color: #009578;
+	border: 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;;
+}
+
+#schoolBtn:hover {
+	background-color: #00b28f;
+}
+
+#schooltxt {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaa;
+}
+
+#acc {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaa;
+}
+
+#sci {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaa;
+}
+
+#gender {
+	position: relative;
+	top: 5px;
+}
+
+#genderoption {
+	position: relative;
+	left: 55px;
+}
