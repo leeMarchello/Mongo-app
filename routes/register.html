@@ -4,22 +4,56 @@
 
 <head>
     <link rel='stylesheet' type='text/css' href='./style.css'>
-    <script type='text/javascript'>
+	<script type='text/javascript'>
+		
         function makeCall() {
-			var name = "Chandre"
-			var surname = 'Oosterwyk'
-			var school = 'Elsies River High'
-            fetch(`http://localhost:9000/api/register`, {
+			
+		var Mylist = [] ;
+		var name = document.getElementById("name").value;
+		var surname = document.getElementById("surname").value;
+		var schoolname = document.getElementById("schoolname").value;
+		var province = document.getElementById("province");
+        var centre = province.options[province.selectedIndex].value;
+		console.log(centre);
+		var grade = document.getElementById("grade").value;
+		var age = document.getElementById("age").value;
+		var email = document.getElementById("email").value;
+		var password = document.getElementById("password").value;
+		var conpassword = document.getElementById("confirmed").value;
+		//var myupload = document.getElementById("Upload").value;
+		if(password.value !== conpassword.value){
+			alert("Blyat! The passwords are not the same!");
+		} else if(password.value === conpassword.value){
+			console.log("hello");
+			Mylist.push(name);
+			Mylist.push(surname);
+			Mylist.push(schoolname);
+			Mylist.push(centre);
+			Mylist.push(grade);
+			Mylist.push(age);
+			Mylist.push(email);
+			Mylist.push(password);
+			Mylist.push(conpassword);
+			alert("Application submitted!");
+		}else{
+			alert("Nothing is entered! Blyat!");
+		}
+	
+	
+			fetch(`http://localhost:9000/api/register`, {
+				method: "POST",
 				headers: {
 					'Accept': 'application/json',
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
-				method: "POST",
 				body: JSON.stringify(
 					{
 						name: name, 
-						surname: surname,
-						schoolName: school
+						surname: schoolname,
+						schoolName: schoolname,
+						grade: grade,
+						age: age,
+						email: email,
 					}
 				)
 			}).then(res => console.log("response: ", res));

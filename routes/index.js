@@ -7,7 +7,10 @@ const mongoose = require('mongoose')
 const clientSchema = new mongoose.Schema({
   name: String,
   surname: String,
-  schoolName:  String ,
+  schoolName:  String,
+  grade: String,
+  age: Number,
+  email: String,
 });
 
 // Create a model for schema
