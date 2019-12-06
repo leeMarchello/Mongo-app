@@ -8,9 +8,12 @@ const clientSchema = new mongoose.Schema({
   name: String,
   surname: String,
   schoolName:  String,
+  courseList: Array, 
   grade: String,
   age: Number,
   email: String,
+  password: String,
+  gender: String,
 });
 
 // Create a model for schema
