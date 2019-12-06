@@ -1,3 +1,19 @@
-.container{
-	width: 50%
+.jumbotron {
+    margin-top: 5%;
+}
+
+.jumbotron > .container {
+    width: 50%;
+}
+
+.center-img {
+    margin: auto;
+    width: 70%;
+    height: 70%;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+    margin-left: 200px;
 }
