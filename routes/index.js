@@ -16,10 +16,14 @@ const clientSchema = new mongoose.Schema({
 // Create a model for schema
 
 router.get('/', function(req, res, next) {
+  res.sendFile(__dirname + '/login.html');
+});
+
+router.get('/register', function(req, res, next) {
   res.sendFile(__dirname + '/register.html');
 });
 
-router.get('/style.css', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.sendFile(__dirname + '/style.css');
 });
 
