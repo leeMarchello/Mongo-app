@@ -97,3 +97,61 @@ p {color: red;}
 	position: relative;
 	left: 55px;
 }
+
+.container-sm {
+	width: 300px;
+	padding: 500px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.form-control {
+	width: 50%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 40px 50px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #4CAF50;
+}
+
+#home {
+	position: relative;
+}
+
+.header {
+	padding: 80px;
+	text-align: center;
+	background: #1abc9c;
+	color: white;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#hi {
+	font-size: 30;
+	color: aliceblue;
+	float: right;
+}
