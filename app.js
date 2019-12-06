@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var express = require('express');
 var logger = require('morgan');
 var path = require('path');
-
+// jin wei made this
 // Connect to DB
 const db_name = 'school';
 mongoose.connect(`mongodb://localhost/${db_name}`)
