@@ -64,7 +64,11 @@
 					gender: gender,
 				}
 			)
-		}).then(res => console.log("response: ", res.statusText));
+		}).then(res => {
+			alert('Application submitted successfully');
+			console.log("response: ", res.statusText)
+			window.location.href = 'http://localhost:9000'
+		});
 		submitted = true;
 		}
 		else {
