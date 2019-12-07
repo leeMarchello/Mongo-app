@@ -43,7 +43,6 @@
 		alert("Blyat! The passwords are not the same!");
 	} 
 	var submitted = false;
-    while (!submitted){
 	if (password === conpassword){
 		fetch(`http://localhost:9000/api/register`, {
 			method: "POST",
@@ -68,7 +67,9 @@
 		}).then(res => console.log("response: ", res.statusText));
 		submitted = true;
 		}
-	}
+		else {
+			alert("Password does not match, please correct it.");
+		}
 	}
     </script>
 </head>
@@ -111,7 +112,6 @@
 							<input type="radio" name="gender-choice" value="female">
 						</div>
 					</div>
-
 					<br>
 					<form>
 							<label for=""><b>Course</b></label> <br>
@@ -119,7 +119,6 @@
 							<input type="checkbox" id="ICT" value="ICT" > ICT<br>
 							<input type="checkbox" id="accounting" value="accounting" > Accounting<span id="acc">Grade 8-12 ONLY.</span><br>
 							<input type="checkbox" id="science" value="science" > Science<span id="sci">Grade 8-12 ONLY.</span><br>
-							
 					</form>
 
 					<br>
@@ -141,13 +140,7 @@
 							<button type="button" id="parentalB">Choose a file</button>
 							<span id="parentalS">No file chosen, yet.</span>
 						</div>
-					<label for="Upload"><b>School Performance</b></label>
-						<div>
-							<input type="file" id="school" hidden="hidden">
-							<button type="button" id="schoolBtn">Choose a file</button>
-							<span id="schooltxt">No file chosen, yet.</span>
-						</div>
-
+					
 						<script type="text/javascript">
 							const parentalBB = document.getElementById("parental");
 							const parentalBtn = document.getElementById("parentalB");
@@ -165,22 +158,7 @@
 								}
 							});
 
-							const schoolBtn1 = document.getElementById("school");
-							const schoolBtn2 = document.getElementById("schoolBtn");
-							const schoolTxt = document.getElementById("schooltxt");
-
-							schoolBtn2.addEventListener("click", function() {
-								schoolBtn1.click();
-							});
-
-							schoolBtn1.addEventListener("change",function() {
-								if(schoolBtn1.value){
-									schoolTxt.innerHTML = schoolBtn1.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-								} else{
-									schoolTxt.innerHTML = "No file chosen, yet.";
-								}
-							});
-
+							
 						</script>
 			</fieldset>
 		</div>
