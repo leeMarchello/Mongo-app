@@ -157,3 +157,22 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .text-white {
     color: white;
 }
+.newcontainer {
+	width: 100%;
+	height: auto;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.car {
+	widows: 20%;
+	height: 300px;
+	margin: 20px;
+	box-sizing: border-box;
+}
+
+.card-body {
+	background-color: rgba(0,123,255,.25);
+}
