@@ -19,12 +19,13 @@ const clientSchema = new mongoose.Schema({
 
 // Create a model for schema
 const queryDB = mongoose.model('clients', clientSchema);
-router.get('/', function(req, res, next) {
-  res.sendFile(__dirname + '/login.html');
+router.get('/', function(req, res) {
+  res.sendFile('index.html');
 });
 
 router.get('/register', function(req, res, next) {
-  res.sendFile(__dirname + '/register.html');
+  //res.sendFile(__dirname + '/register.html');
+  res.sendFile('register.html');
 });
 
 router.post('/api/login', function(req, res) {
