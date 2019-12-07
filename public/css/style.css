@@ -20,8 +20,12 @@ input[type=text]:focus, input[type=password]:focus {
 	outline: none;
 }
 body {background-color: lightblue;}
+<<<<<<< HEAD
 h1 {color: black;}
 p {color: red;}
+=======
+
+>>>>>>> 3ea7e7543540743f655029efa3387fc8a0b949cb
 .btn {
 	border: none;
 	background-color: inherit;
