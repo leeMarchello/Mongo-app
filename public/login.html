@@ -31,7 +31,18 @@
                 <label for="login-password">Password</label>
                 <input type="password" class="form-control" id="login-password">
             </div>
-            <input type="submit" value='Sign In' class="btn btn-primary" onclick="redirect()" />
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            <div class="regi">
+                <button id="direct" type="button" class="btn btn-outline-success" onclick="redirect()">Register</button>
+                <span>Don't have an account with us?</span>
+                <script type="text/javascript">
+                    function redirect(){
+                        var url = "register.html";
+                        location.replace(url);
+                    }
+                </script>
+            </div>
+        </form>
     </div>
   </div>
 </body>
