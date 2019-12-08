@@ -1,4 +1,4 @@
-function redirect() {
+function authenticate() {
     let email = document.getElementById("login-email").value;
     let password = document.getElementById("login-password").value;
     fetch(`http://localhost:9000/api/login`, {
@@ -14,13 +14,13 @@ function redirect() {
     })
     .then( response => {
         console.log('login response: ', response);
-        if (response.status === 200)
-            window.location.href = 'http://localhost:9000/home.html'     
+        if (response.status === 200){
+            console.log("The response status is ", response.status);
+            window.location.href = 'http://localhost:9000/home.html'    
+            //location.replace('http://localhost:9000/home.html') 
+        }
         else {
             alert("Login details incorrect, please try again");
         }
     })
-    //window.location.replace('http://localhost:9000/home.html');
-    //window.open('home.html');
-    //window.location.href = 'http://localhost:9000/home.htm' 
 }

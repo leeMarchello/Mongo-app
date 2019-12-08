@@ -31,13 +31,8 @@
                 <label for="login-password">Password</label>
                 <input type="password" class="form-control" id="login-password">
             </div>
-            <button type="submit" class="btn btn-primary" onclick="direct()">Sign in</button>
-            <script type="text/javascript">
-                function direct() {
-                    var url1 = "home.html";
-                    location.replace(url1);
-                }
-            </script>
+            <button type="submit" class="btn btn-primary" onclick="authenticate()">Sign in</button>
+            
             <div class="regi">
                 <button id="direct" type="button" class="btn btn-outline-success" onclick="redirect()">Register</button>
                 <span>Don't have an account with us?</span>

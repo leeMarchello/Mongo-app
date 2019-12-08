@@ -29,17 +29,24 @@ router.get('/register', function(req, res, next) {
 });
 
 router.post('/api/login', function(req, res) {
-  console.log("login request received: ", req.body);
   queryDB.find({email: req.body.email, password: req.body.password})
+  .limit(1)
   .then(data => {
-    console.log("query data: ", JSON.stringify(data));
-    console.log("data.email: ", data[0].email);
-    if (req.body.email === data[0].email && req.body.password === data[0].password )
-      res.send(JSON.stringify(data[0]))
-    else
-      return null; 
-    });
-});
+    console.log("DB data.email: ", data[0].email);
+    console.log("DB data.password: ", data[0].password);
+    if (data){
+        if (req.body.email === data[0].email && req.body.password === data[0].password ) {
+          console.log("Email and password matches in database");
+          res.send(JSON.stringify(data[0]))
+        }
+    }
+    else {
+      console.log("Credentials not found");
+      res.status(404).send("Not Found"); 
+    }
+    })
+    .catch(err => res.status(404).send(err));
+  });
 
 router.post('/api/register', function(req, res){
   console.log('Registration body received: ', req.body);
