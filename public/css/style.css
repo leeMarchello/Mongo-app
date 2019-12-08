@@ -157,6 +157,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .text-white {
     color: white;
 }
+
+#mycourse {
+	text-align: center;
+}
 .newcontainer {
 	width: 100%;
 	height: auto;
