@@ -9,6 +9,7 @@
 	var Mylist = [] ;
 	var courseList = [];
 	var name = document.getElementById("name").value;
+	var comment = document.getElementById("comment").value;
 	var surname = document.getElementById("surname").value;
 	var schoolname = document.getElementById("schoolname").value;
 	var province = document.getElementById("province");
@@ -53,7 +54,8 @@
 			body: JSON.stringify(
 				{
 					name: name, 
-					surname: schoolname,
+					comment: comment,
+					surname: surname,
 					schoolName: schoolname,
 					grade: grade,
 					centre: centre,
@@ -87,6 +89,8 @@
 				<legend>Information about you</legend>
 					<label><b>Name</b></label>
 					<input id="name" type="text" placeholder="Enter Name" required>
+
+					<input id="comment" type="hidden" value=" ">
 
 					<label><b>Surname</b></label>
 					<input id="surname" type="text" placeholder="Enter Surname" required>
