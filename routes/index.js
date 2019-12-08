@@ -29,6 +29,18 @@ router.get('/register', function(req, res, next) {
   res.sendFile('register.html');
 });
 
+// Obtain list of student records endpoint
+router.get('/api/get/students', (request, response) => {
+  queryDB.find({})
+    .then(data => {
+      console.log('GET STUDENTS: ', data.forEach(item => console.log(item)))
+      response.send(data);
+    })
+    .catch(error => response.status(404).send(err))
+});
+
+
+// Login authentication endpoint
 router.post('/api/login', function(req, res) {
   queryDB.find({email: req.body.email, password: req.body.password})
   .limit(1)
@@ -49,6 +61,8 @@ router.post('/api/login', function(req, res) {
     .catch(err => res.status(404).send(err));
   });
 
+
+// Registration endpoint
 router.post('/api/register', function(req, res){
   console.log('Registration body received: ', req.body);
   console.log('req.body.name: ', req.body.name);
