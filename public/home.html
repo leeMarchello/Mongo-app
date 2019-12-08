@@ -24,35 +24,79 @@
 	</div>
 
 	<div class="newcontainer">
-		<div class="card" style="width: 18rem;">
+		<div id="div1" class="card" style="width: 18rem;">
 			<div class="card-body">
 				<h5 class="card-title">Mathematics</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<button type="button" class="btn btn-danger">De-register</button>
+				<button type="button" class="btn btn-danger" onclick="disab1()">De-register</button>
+				<script type="text/javascript">
+					function disab1(){
+						var y = document.getElementById("div1");
+						if (y.style.display === "none") {
+							y.style.display = "block";
+						} else {
+							y.style.display = "none";
+						}
+						alert("De-registered successfully!");
+					}
+				</script>
 			</div>
 		</div>
 		
-		<div class="card" style="width: 18rem;">
+		<div id="div2" class="card" style="width: 18rem;">
 			<div class="card-body">
 				<h5 class="card-title">ICT</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<button type="button" class="btn btn-danger">De-register</button>
+				<button type="button" class="btn btn-danger" onclick="disab()" >De-register</button>
+				<script type="text/javascript">
+					function disab() {
+						var x = document.getElementById("div2");
+						if (x.style.display === "none") {
+							x.style.display = "block";
+						} else {
+							x.style.display = "none";
+						}
+						alert("De-registered successfully!");
+					}
+				</script>
 			</div>
 		</div>
 
-		<div class="card" style="width: 18rem;">
+		<div id="div3" class="card" style="width: 18rem;">
 			<div class="card-body">
 				<h5 class="card-title">Science</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<button type="button" class="btn btn-danger">De-register</button>
+				<button type="button" class="btn btn-danger" onclick="disab3()">De-register</button>
+				<script type="text/javascript">
+					function disab3() {
+						var z = document.getElementById("div3");
+						if (z.style.display === "none") {
+							z.style.display = "block";
+						} else {
+							z.style.display = "none";
+						}
+						alert("De-registered successfully!");
+					}
+				</script>
 			</div>
 		</div>
 
-		<div class="card" style="width: 18rem;">
+		<div id="div4" class="card" style="width: 18rem;">
 			<div class="card-body">
 				<h5 class="card-title">Accounting</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<button type="button" class="btn btn-danger">De-register</button>
+				<button type="button" class="btn btn-danger" onclick="disab4()">De-register</button>
+				<script type="text/javascript">
+					function disab4() {
+						var c = document.getElementById("div4");
+						if (c.style.display === "none") {
+							c.style.display = "block";
+						} else {
+							c.style.display = "none";
+						}
+						alert("De-registered successfully!");
+					}
+				</script>
 			</div>
 		</div>
 	</div>
