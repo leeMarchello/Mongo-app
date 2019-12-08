@@ -15,6 +15,7 @@ const clientSchema = new mongoose.Schema({
   password: String,
   gender: String,
   centre: String,
+  comment: String,
 });
 
 // Create a model for schema
