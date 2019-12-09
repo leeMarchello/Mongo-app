@@ -48,14 +48,14 @@
 
             <div id="id01" class="modal">
             
-                <form class="modal-content animate" method="post">
+                <form class="modal-content animate" action='public/admin.html' method="post">
                 
                     <div class="container">
                 
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" required>
                             
-                        <button type="submit" class="btn btn-primary" onclick="nextp()">Login</button>
+                        <button type="button" class="btn btn-primary" onclick="nextp()">Login</button>
                         </div>
 
                         <div class="container" style="background-color:#f1f1f1">
@@ -78,12 +78,11 @@
                 function nextp() {
                     var anser = enterpss.localeCompare(rightpswd);
                     if(anser == 0) {
-                        window.location.replace(newpage);
+                        location.replace(newpage);
                     } else {
                         alert("Password Incorrect!");
                     }
                 }
-
             </script>
                     
 
