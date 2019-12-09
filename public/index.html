@@ -43,6 +43,50 @@
                     }
                 </script>
             </div>
+
+            <button id="adminlog" type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Log-in</button>
+
+            <div id="id01" class="modal">
+            
+                <form class="modal-content animate" method="post">
+                
+                    <div class="container">
+                
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                            
+                        <button type="submit" class="btn btn-primary" onclick="nextp()">Login</button>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <script>
+                var modal = document.getElementById('id01');
+                var enterpss = document.getElementById('psw').value;
+                var rightpswd = "admin456";
+                var newpage = "admin.html";
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+                function nextp() {
+                    var anser = enterpss.localeCompare(rightpswd);
+                    if(anser == 0) {
+                        window.location.replace(newpage);
+                    } else {
+                        alert("Password Incorrect!");
+                    }
+                }
+
+            </script>
+                    
+
         </form>
     </div>
   </div>
