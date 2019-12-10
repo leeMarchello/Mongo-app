@@ -215,3 +215,17 @@ a:link, a:visited {
 	max-width: 100%;
 	max-height: 10px;
   }
+
+  #logout {
+	  position: relative;
+	  bottom: 50px;
+	  max-height: 25px;
+  }
+
+.btn {
+	padding: 1px 28px;
+}
+
+.btn-secondary{
+	color: #212529;
+}
