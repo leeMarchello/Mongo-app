@@ -16,9 +16,14 @@ fetch('http://localhost:9000/api/get/students')
         var row = document.createElement('tr');
         row.id= "row"+i;
         document.getElementById("table01").appendChild(row);
-        var valuelist = Object.values(listOfStudents[i]);
+        var valuelist = [];
+        valuelist.push(listOfStudents[i].name);
+        valuelist.push(listOfStudents[i].surname);
+        valuelist.push(listOfStudents[i].centre);
+        valuelist.push(listOfStudents[i].courseList);
+        valuelist.push(listOfStudents[i].comment);
+        var objlen = valuelist.length;
         console.log(valuelist);
-        var objlen = Object.keys(listOfStudents).length;
         for(var x =0; x< objlen; x++){
             var cell = document.createElement("td");
             var cellbody = document.createTextNode(valuelist[x]);
