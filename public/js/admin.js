@@ -17,16 +17,16 @@ fetch('http://localhost:9000/api/get/students')
         row.id= "row"+i;
         document.getElementById("table01").appendChild(row);
         var valuelist = Object.values(listOfStudents[i]);
+        console.log(valuelist);
         var objlen = Object.keys(listOfStudents).length;
-    }
-    console.log(objlen);
         for(var x =0; x< objlen; x++){
-            console.log("yeah");
             var cell = document.createElement("td");
             var cellbody = document.createTextNode(valuelist[x]);
             cell.appendChild(cellbody);
             document.getElementById("table01").appendChild(cell)  
         }
+    }
+    
 })
  .catch( error => console.log("Error during fetch: ",error));
 
