@@ -47,18 +47,14 @@
             <button id="adminlog" type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Log-in</button>
 
             <div id="id01" class="modal">
-            
                 <form class="modal-content animate" action='public/admin.html' method="post">
-                
                     <div class="container">
-                
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
-                            
-                        <button type="button" class="btn btn-primary" onclick="nextp()">Login</button>
-                        </div>
+                        <input id='entered-password-modal' type="password" placeholder="Enter Password" name="psw" required>
+                        <button type="button" class="btn btn-primary" onclick="adminLogin()">Login</button>
+                    </div>
 
-                        <div class="container" style="background-color:#f1f1f1">
+                    <div class="container" style="background-color:#f1f1f1">
                         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancel</button>
                     </div>
                 </form>
@@ -66,19 +62,17 @@
 
             <script>
                 var modal = document.getElementById('id01');
-                var enterpss = document.getElementById('psw').value;
-                var rightpswd = "admin456";
-                var newpage = "admin.html";
+                var adminPassword = "admin456";
                 window.onclick = function(event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
                     }
                 }
 
-                function nextp() {
-                    var anser = enterpss.localeCompare(rightpswd);
-                    if(anser == 0) {
-                        location.replace(newpage);
+                function adminLogin() {
+                    var enteredPassword = document.getElementById('entered-password-modal').value;
+                    if(enteredPassword == adminPassword) {
+                        location.replace('admin.html');
                     } else {
                         alert("Password Incorrect!");
                     }
