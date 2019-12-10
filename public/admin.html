@@ -20,8 +20,15 @@
         <ol class="breadcrumb">
             <span class="badge badge-pill badge-success">Welcome</span>
             <span class="badge badge-pill badge-light">Admin</span>
-        </ol>
+        </ol> 
+        <button onclick="redirfunc()" style="float: right;" id="logout" type="button" class="btn btn-secondary">Log out</button>
     </nav>
+    <script>
+        function redirfunc(){
+            var redir = "index.html"
+            location.replace(redir);
+        }
+    </script>
 
     <div id="searchcontainer" class="input-group mb-3">
         <input id="searchinput" onkeyup="searchput()" type="text" class="form-control" placeholder="Search something..." aria-label="Search something..." aria-describedby="basic-addon2">
