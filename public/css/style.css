@@ -193,3 +193,20 @@ a:link, a:visited {
   a:hover, a:active {
 	background-color: red;
   }
+
+  #searchinput {
+	  max-width: 40%;
+  }
+
+  #basic-addon2 {
+	  position: relative;
+	  top: 2px;
+  }
+
+  #searchcontainer {
+	text-align: right;
+  }
+
+  .inputclass {
+	  max-width: 30%;
+  }
