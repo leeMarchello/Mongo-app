@@ -17,19 +17,26 @@ fetch('http://localhost:9000/api/get/students')
         row.id= "row"+i;
         document.getElementById("table01").appendChild(row);
         var valuelist = [];
-        valuelist.push(listOfStudents[i].name);
-        valuelist.push(listOfStudents[i].surname);
-        valuelist.push(listOfStudents[i].centre);
+        valuelist.push(listOfStudents[i].name.toUpperCase());
+        valuelist.push(listOfStudents[i].surname.toUpperCase());
+        valuelist.push(listOfStudents[i].centre.toUpperCase());
         valuelist.push(listOfStudents[i].courseList);
-        valuelist.push(listOfStudents[i].comment);
+        for(var k =0; k<valuelist[3].length; k++){
+            var tmp = valuelist[3][k].toUpperCase();
+            valuelist[3][k] = tmp;
+        }
         var objlen = valuelist.length;
-        console.log(valuelist);
+
         for(var x =0; x< objlen; x++){
             var cell = document.createElement("td");
             var cellbody = document.createTextNode(valuelist[x]);
             cell.appendChild(cellbody);
             document.getElementById("table01").appendChild(cell)  
         }
+        var Tinput = document.createElement("input");
+        Tinput.setAttribute("type","text");
+        Tinput.setAttribute("id","tableinput");
+        document.getElementById("table01").appendChild(Tinput);
     }
     
 })
