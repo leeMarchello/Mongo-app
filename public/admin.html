@@ -24,7 +24,12 @@
     </nav>
 
     <div id="searchcontainer" class="input-group mb-3">
-        <input id="searchinput" type="text" class="form-control" placeholder="Search something..." aria-label="Search something..." aria-describedby="basic-addon2">
+        <input id="searchinput" onkeyup="searchput()" type="text" class="form-control" placeholder="Search something..." aria-label="Search something..." aria-describedby="basic-addon2">
+        <script type="text/javascript">
+            function searchput(){
+
+            }
+        </script>
         <div class="input-group-append">
             <span class="input-group-text" id="basic-addon2">Search</span>
         </div>
@@ -39,11 +44,7 @@
             <th scope="col">Course</th>
             <th scope="col">Comment</th>
             </tr>
-            <tr></tr>
         </thead>
     </table>
-    <script>
-    
-    </script>
 </body>
 </html>
