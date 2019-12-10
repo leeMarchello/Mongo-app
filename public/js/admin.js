@@ -33,10 +33,13 @@ fetch('http://localhost:9000/api/get/students')
             cell.appendChild(cellbody);
             document.getElementById("table01").appendChild(cell)  
         }
+        var TableCell = document.createElement("td");
         var Tinput = document.createElement("input");
         Tinput.setAttribute("type","text");
         Tinput.setAttribute("id","tableinput");
         document.getElementById("table01").appendChild(Tinput);
+        TableCell.appendChild(Tinput);
+        document.getElementById("table01").appendChild(TableCell);
     }
     
 })
