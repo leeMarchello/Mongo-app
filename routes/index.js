@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose')
 
-/* GET home page. */
 
 const clientSchema = new mongoose.Schema({
   name: String,
@@ -20,8 +19,20 @@ const clientSchema = new mongoose.Schema({
 
 // Create a model for schema
 const queryDB = mongoose.model('clients', clientSchema);
+
+
+router.get('/flash', function(req, res){
+  req.flash('info', 'This is a flash message');
+  setTimeout(()=> {
+    console.log("displayed flash") 
+    res.redirect('/');
+  },3000);
+});
+
+/* GET home page. */
 router.get('/', function(req, res) {
-  res.sendFile('index.html');
+  //res.sendFile('index.html');
+  res.render('index', { message: req.flash('info') });
 });
 
 router.get('/register', function(req, res, next) {
